@@ -18,3 +18,7 @@ The Pellet Purchase Dapp leverages blockchain technology to facilitate secure an
 To run the Pellet Purchase Dapp locally, follow these steps:
 
 
+Run yarn or npm install to install all the required dependencies to run the dApp.
+
+cd to packages
+run npm start
