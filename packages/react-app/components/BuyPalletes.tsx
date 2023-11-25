@@ -44,19 +44,38 @@ const BuyPalletes: React.FC = () => {
   };
 
   return (
-    <div style={{ width: '100%', height: '100%', position: 'relative', background: 'white', borderRadius: '20px', overflow: 'hidden', border: '1px black solid' }}>
-      {/* Placeholder for the image */}
-      <img style={{ width: '225px', height: '225px', left: '113px', top: '-31px', position: 'absolute' }} src="https://via.placeholder.com/225x225" alt="Placeholder" />
+    
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100" style={{ padding: '20px', margin: '20px' }}>
+      <div style={{ width: '186px', height: '36px', background: 'yellow' }}> {/* Placeholder for button dimensions */}
+        <div style={{ padding: '10px', width: '100%', height: '100%' }}> {/* Container with padding and size */}
+          <div>
+            <div>10KG</div>
+            <button onClick={() => handleDecrement('10KG')}>-</button>
+            <span>{selectedPalettes['10KG']}</span>
+            <button onClick={() => handleIncrement('10KG')}>+</button>
+          </div>
+          <div>
+            <div>30KG</div>
+            <button onClick={() => handleDecrement('30KG')}>-</button>
+            <span>{selectedPalettes['30KG']}</span>
+            <button onClick={() => handleIncrement('30KG')}>+</button>
+          </div>
+          <div>
+            <div>50KG</div>
+            <button onClick={() => handleDecrement('50KG')}>-</button>
+            <span>{selectedPalettes['50KG']}</span>
+            <button onClick={() => handleIncrement('50KG')}>+</button>
+          </div>
+        </div>
+      </div>
 
-      {/* SVG elements */}
-      <svg width="100" height="100" style={{ position: 'absolute', left: '20px', top: '20px' }}>
-        {/* Add your SVG elements here */}
-        <circle cx="50" cy="50" r="40" stroke="green" strokeWidth="4" fill="yellow" />
-        <rect x="10" y="10" width="30" height="30" stroke="blue" strokeWidth="2" fill="orange" />
-      </svg>
-
-      {/* Placeholder for the palettes */}
-      {/* ... (Elements for palettes, buttons, labels, and checkout button) */}
+     
+      {/* Checkout button */}
+      <div style={{ width: '186px', height: '36px', bottom: '20px', position: 'absolute', background: '#FF900E', borderRadius: '10px' }}>
+        <button onClick={handleCheckout} style={{ width: '100%', height: '100%', textAlign: 'center', color: 'black', fontSize: '24px', fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word', border: 'none', background: 'transparent' }}>
+          Checkout
+        </button>
+      </div>
     </div>
   );
 };
